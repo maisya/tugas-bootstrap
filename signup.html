@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/html" src="index.html">
+</head>
+<body>
+	<center><h2>Silakan Isi Data dengan Benar</h2></center>
+	<div class="signup">
+		<form action="#" method="POST" onSubmit="validasi()">
+			<div>
+				<label>Nama Lengkap:</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+			<div>
+				<label>Username:</label>
+				<input type="text" name="user" id="user"/>
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>Password:</label>
+				<input type="text" name="pass" id="pass" />
+			</div>
+			<div>
+				<label>Alamat:</label>
+				<textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var user = document.getElementById("user").value;
+		var email = document.getElementById("email").value;
+		var pass = document.getElementById("pass").value;
+		var alamat = document.getElementById("alamat").value;
+		if (nama != "" && user != "" && email!="" && pass !="" && alamat !="" ) {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+</html>
+
